@@ -44,7 +44,7 @@ if __name__ == '__main__':
         x, y, w, h = int(coord['x']), int(coord['y']), int(coord["width"]), int(coord["height"])
         try: 
             mask = cv.imread(f"{mask_dir}/{tag}_{imgname}")
-            mask = cv.resize(mask, (mask.shape[1]*2, mask.shape[0]*2), interpolation=cv.INTER_NEAREST)
+            mask = cv.resize(mask, (mask.shape[1], mask.shape[0]), interpolation=cv.INTER_NEAREST)
 
             # print(mask.shape[:2], h, w)
 
