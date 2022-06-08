@@ -74,7 +74,7 @@ class InteractiveImageSegmentation:
         mask[:10,:] = cv2.GC_PR_BGD
 
     def process(self, img):
-        # img = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2), interpolation=cv2.INTER_AREA)
+        img = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2), interpolation=cv2.INTER_AREA)
         # img = cv2.resize(img, (img.shape[1]*3//2, img.shape[0]*3//2), interpolation=cv2.INTER_AREA)
 
         self.img = np.copy(img)
